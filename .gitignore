@@ -1,2 +1,3 @@
-space_dataset/data/*
+space_dataset/all-data/*
 space_dataset/downloads/*
+AGENTS.md
