@@ -1,0 +1,20 @@
+2025-11-07 15:32:02,113 - dataverse- download_data - 102 - Downloaded: filename healthd_dmgrcs_mortality_disc.zip, id 11672666, saved to /var/folders/dk/ps51lk415wj_mj27wgf633380000gn/T/healthd_dmgrcs_mortality_disc.zip
+2025-11-07 15:33:13,097 - dataverse- download_data - 92 - File healthd_dmgrcs_mortality_disc.zip already exists in the temporary directory.
+2025-11-07 15:35:47,145 - dataverse- download_data - 102 - Downloaded: filename climate_wfsmoke_minrty_disc.zip, id 11680294, saved to /var/folders/dk/ps51lk415wj_mj27wgf633380000gn/T/climate_wfsmoke_minrty_disc.zip
+2025-11-07 15:37:35,221 - dataverse- download_data - 92 - File healthd_dmgrcs_mortality_disc.zip already exists in the temporary directory.
+2025-11-07 15:38:50,689 - dataverse- download_data - 102 - Downloaded: filename climate_wfsmoke_minrty_disc.zip, id 11680294, saved to /var/folders/dk/ps51lk415wj_mj27wgf633380000gn/T/climate_wfsmoke_minrty_disc.zip
+2025-11-07 15:38:51,208 - env- make - 397 - Missing covariate group (selected at random): E_NOINT
+2025-11-07 15:40:29,217 - dataverse- download_data - 102 - Downloaded: filename healthd_dmgrcs_mortality_disc.zip, id 11672666, saved to /var/folders/dk/ps51lk415wj_mj27wgf633380000gn/T/healthd_dmgrcs_mortality_disc.zip
+2025-11-07 15:40:29,316 - env- make - 397 - Missing covariate group (selected at random): relative_humidity
+2025-11-07 16:37:14,265 - dataverse- download_data - 102 - Downloaded: filename cdcsvi_limteng_hburdic_cont.zip, id 11680298, saved to /var/folders/dk/ps51lk415wj_mj27wgf633380000gn/T/cdcsvi_limteng_hburdic_cont.zip
+2025-11-07 16:37:14,743 - env- make - 397 - Missing covariate group (selected at random): EP_AGE17
+2025-11-07 16:37:18,007 - dataverse- download_data - 102 - Downloaded: filename climate_relhum_wfsmoke_cont.zip, id 11680299, saved to /var/folders/dk/ps51lk415wj_mj27wgf633380000gn/T/climate_relhum_wfsmoke_cont.zip
+2025-11-07 16:37:18,786 - env- make - 397 - Missing covariate group (selected at random): poverty
+2025-11-07 16:37:22,263 - env- make - 397 - Missing covariate group (selected at random): POPULATION_2020
+2025-11-07 16:37:26,930 - dataverse- download_data - 102 - Downloaded: filename healthd_hhinco_mortality_cont.zip, id 11680303, saved to /var/folders/dk/ps51lk415wj_mj27wgf633380000gn/T/healthd_hhinco_mortality_cont.zip
+2025-11-07 16:37:27,279 - env- make - 397 - Missing covariate group (selected at random): qd_mean_pm25
+2025-11-07 16:50:53,517 - env- make - 397 - Missing covariate group (selected at random): qd_mean_pm25
+2025-11-07 16:57:44,131 - env- make - 397 - Missing covariate group (selected at random): specific_humidity
+2025-11-07 16:58:26,954 - env- make - 397 - Missing covariate group (selected at random): avg_tmax_jul
+2025-11-11 16:50:38,442 - env- make - 398 - Missing covariate group (selected at random): specific_humidity
+2025-11-12 13:58:36,731 - env- make - 398 - Missing covariate group (selected at random): race
