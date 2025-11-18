@@ -1,0 +1,1 @@
+For using this dataset (for example full_dataset.csv), the image embeddings are totally the same as cdcsvi_nohsdp_poverty_disc, but in different order. So, refer to `embed_idx` for the data.

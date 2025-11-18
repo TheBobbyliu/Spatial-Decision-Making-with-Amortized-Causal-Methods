@@ -1,0 +1,60 @@
+spaceenv:
+  base_name: ${hydra:runtime.choices.spaceenv}
+  covariates:
+  - EP_UNEMP
+  - EP_AGE65
+  - EP_AGE17
+  - EP_DISABL
+  - EP_SNGPNT
+  - EP_LIMENG
+  - EP_MINRTY
+  - EP_MUNIT
+  - EP_NOVEH
+  - EP_NOINT
+  - RPL_THEME3
+  outcome: EP_POV150
+  treament: ???
+  index_col: 0
+  treatment_max_bins: 100
+  scaling:
+    outcome: null
+    treatment: null
+    covariates: null
+  transforms:
+    outcome: null
+    treatment: null
+    covariates: null
+  fill_missing_covariate_values: true
+  bsplines: false
+  bsplines_degree: 3
+  bsplines_df: 5
+  binary_treatment_iteractions: true
+  seed: 42
+  autogluon:
+    fit:
+      presets: good_quality
+      time_limit: 900
+    leave_out_fit:
+      presets: good_quality
+      time_limit: 900
+    feat_importance:
+      time_limit: 900
+  spatial_tuning:
+    init_frac: 0.03
+    levels: 1
+    buffer: 1
+  treatment_quantile_valid_range:
+  - 0.025
+  - 0.975
+  outcome_quantile_valid_range:
+  - 0.01
+  - 0.99
+  ensemble_models:
+  - FASTAI
+  - CAT
+  - NN_TORCH
+  - XGB
+  collection: cdc_atsdr_svi_tx
+  treatment: EP_NOHSDP
+num_plot_samples: 50
+debug_subsample: null

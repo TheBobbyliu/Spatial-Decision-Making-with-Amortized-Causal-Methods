@@ -18,3 +18,4 @@
 2025-11-07 16:58:26,954 - env- make - 397 - Missing covariate group (selected at random): avg_tmax_jul
 2025-11-11 16:50:38,442 - env- make - 398 - Missing covariate group (selected at random): specific_humidity
 2025-11-12 13:58:36,731 - env- make - 398 - Missing covariate group (selected at random): race
+2025-11-12 16:00:52,411 - env- make - 398 - Missing covariate group (selected at random): EP_DISABL
