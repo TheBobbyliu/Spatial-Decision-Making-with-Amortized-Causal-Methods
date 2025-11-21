@@ -1,0 +1,117 @@
+python3 linear_fit.py --embedding-epochs 300 --pca --standardize    
+Loaded 6693 rows with 11 covariates.
+Feature matrix shape: (6693, 1024)
+standardize feature
+Train/val split: 5354 train / 1339 val (val frac=0.20)
+
+Experiments (validation MAE | R^2):
+[Covariate masking] baseline           -> MAE=6.5079 | R^2=0.6949 | remaining=11
+[Covariate masking] drop EP_NOINT (no internet) -> MAE=6.9703 | R^2=0.6581 | remaining=10
+[Covariate masking] drop EP_DISABL (disabled residents) -> MAE=7.1775 | R^2=0.6462 | remaining=9
+[Covariate masking] drop EP_AGE65 (age 65+) -> MAE=7.2023 | R^2=0.6448 | remaining=8
+[Covariate masking] drop EP_NOVEH (no vehicle) -> MAE=7.9923 | R^2=0.5785 | remaining=7
+[Covariate masking] drop EP_LIMENG (limited English proficiency) -> MAE=8.1989 | R^2=0.5629 | remaining=6
+[Covariate masking] drop EP_AGE17 (age 17 or younger) -> MAE=8.1935 | R^2=0.5636 | remaining=5
+[Covariate masking] drop EP_UNEMP (unemployment) -> MAE=8.3036 | R^2=0.5526 | remaining=4
+[Covariate masking] drop RPL_THEME3 (SVI Theme 3 percentile) -> MAE=8.4873 | R^2=0.5397 | remaining=3
+[Covariate masking] drop EP_SNGPNT (single-parent households) -> MAE=8.8482 | R^2=0.5019 | remaining=2
+[Covariate masking] drop EP_MUNIT (multi-unit housing) -> MAE=8.9402 | R^2=0.4924 | remaining=1
+[Covariate masking] drop EP_MINRTY (minority (non-white)) -> MAE=10.1845 | R^2=0.3673 | remaining=0
+[Features] features -> outcome -> MAE=14.7230 | R^2=-0.1748
+
+[Features -> Covariates]
+EP_NOINT     MAE=0.8771 | R^2=-0.2360
+EP_DISABL    MAE=0.8986 | R^2=-0.2455
+EP_AGE65     MAE=0.8234 | R^2=-0.2321
+EP_NOVEH     MAE=0.8502 | R^2=-0.2270
+EP_LIMENG    MAE=0.8601 | R^2=-0.2418
+EP_AGE17     MAE=0.8700 | R^2=-0.2692
+EP_UNEMP     MAE=0.8487 | R^2=-0.2644
+RPL_THEME3   MAE=0.9626 | R^2=-0.2671
+EP_SNGPNT    MAE=0.8772 | R^2=-0.2576
+EP_MUNIT     MAE=0.8360 | R^2=-0.2023
+EP_MINRTY    MAE=0.9631 | R^2=-0.2693
+
+[Covariate masking + Dino features]
+[Mask+Features] baseline           -> MAE=7.3767 | R^2=0.6360 | remaining=11
+[Mask+Features] drop EP_NOINT (no internet) -> MAE=7.8570 | R^2=0.5962 | remaining=10
+[Mask+Features] drop EP_DISABL (disabled residents) -> MAE=8.0493 | R^2=0.5815 | remaining=9
+[Mask+Features] drop EP_AGE65 (age 65+) -> MAE=8.0823 | R^2=0.5795 | remaining=8
+[Mask+Features] drop EP_NOVEH (no vehicle) -> MAE=8.9186 | R^2=0.4969 | remaining=7
+[Mask+Features] drop EP_LIMENG (limited English proficiency) -> MAE=9.1326 | R^2=0.4800 | remaining=6
+[Mask+Features] drop EP_AGE17 (age 17 or younger) -> MAE=9.1295 | R^2=0.4805 | remaining=5
+[Mask+Features] drop EP_UNEMP (unemployment) -> MAE=9.2595 | R^2=0.4707 | remaining=4
+[Mask+Features] drop RPL_THEME3 (SVI Theme 3 percentile) -> MAE=9.4039 | R^2=0.4565 | remaining=3
+[Mask+Features] drop EP_SNGPNT (single-parent households) -> MAE=9.6194 | R^2=0.4266 | remaining=2
+[Mask+Features] drop EP_MUNIT (multi-unit housing) -> MAE=9.6857 | R^2=0.4149 | remaining=1
+[Mask+Features] drop EP_MINRTY (minority (non-white)) -> MAE=11.0755 | R^2=0.2632 | remaining=0
+
+[Learned linear embeddings]
+Use PCA
+
+[Embeddings -> Covariates]
+EP_NOINT     MAE=0.7880 | R^2=0.0009
+EP_DISABL    MAE=0.8082 | R^2=-0.0038
+EP_AGE65     MAE=0.7325 | R^2=-0.0060
+EP_NOVEH     MAE=0.7551 | R^2=-0.0081
+EP_LIMENG    MAE=0.7692 | R^2=-0.0075
+EP_AGE17     MAE=0.7757 | R^2=-0.0132
+EP_UNEMP     MAE=0.7401 | R^2=-0.0019
+RPL_THEME3   MAE=0.8880 | R^2=-0.0038
+EP_SNGPNT    MAE=0.7801 | R^2=-0.0023
+EP_MUNIT     MAE=0.7467 | R^2=0.0058
+EP_MINRTY    MAE=0.8913 | R^2=-0.0044
+[Mask+Embeds] baseline           -> MAE=6.5483 | R^2=0.6927 | remaining=11
+[Mask+Embeds] drop EP_NOINT (no internet) -> MAE=7.0138 | R^2=0.6561 | remaining=10
+[Mask+Embeds] drop EP_DISABL (disabled residents) -> MAE=7.2140 | R^2=0.6450 | remaining=9
+[Mask+Embeds] drop EP_AGE65 (age 65+) -> MAE=7.2439 | R^2=0.6434 | remaining=8
+[Mask+Embeds] drop EP_NOVEH (no vehicle) -> MAE=8.0385 | R^2=0.5756 | remaining=7
+[Mask+Embeds] drop EP_LIMENG (limited English proficiency) -> MAE=8.2523 | R^2=0.5596 | remaining=6
+[Mask+Embeds] drop EP_AGE17 (age 17 or younger) -> MAE=8.2472 | R^2=0.5605 | remaining=5
+[Mask+Embeds] drop EP_UNEMP (unemployment) -> MAE=8.3590 | R^2=0.5490 | remaining=4
+[Mask+Embeds] drop RPL_THEME3 (SVI Theme 3 percentile) -> MAE=8.5394 | R^2=0.5365 | remaining=3
+[Mask+Embeds] drop EP_SNGPNT (single-parent households) -> MAE=8.8890 | R^2=0.4994 | remaining=2
+[Mask+Embeds] drop EP_MUNIT (multi-unit housing) -> MAE=8.9791 | R^2=0.4899 | remaining=1
+[Mask+Embeds] drop EP_MINRTY (minority (non-white)) -> MAE=10.2084 | R^2=0.3657 | remaining=0
+
+[CATE: covariates only]
+[CATE covs] baseline           -> MAE=6.1009 | R^2=0.7224 | CATE mean=6.3929 std=3.7370 | PEHE=2.6879
+[CATE covs] drop EP_NOINT (no internet) -> MAE=6.5702 | R^2=0.6925 | CATE mean=8.6462 std=3.7172 | PEHE=3.2141
+[CATE covs] drop EP_DISABL (disabled residents) -> MAE=6.8193 | R^2=0.6786 | CATE mean=9.8729 std=3.3938 | PEHE=4.0859
+[CATE covs] drop EP_AGE65 (age 65+) -> MAE=6.9284 | R^2=0.6685 | CATE mean=10.4777 std=3.4212 | PEHE=4.7940
+[CATE covs] drop EP_NOVEH (no vehicle) -> MAE=7.7096 | R^2=0.6017 | CATE mean=13.6783 std=3.8000 | PEHE=7.6289
+[CATE covs] drop EP_LIMENG (limited English proficiency) -> MAE=7.8458 | R^2=0.5904 | CATE mean=13.9262 std=3.9842 | PEHE=7.8986
+[CATE covs] drop EP_AGE17 (age 17 or younger) -> MAE=7.8954 | R^2=0.5864 | CATE mean=13.7932 std=3.6261 | PEHE=7.7221
+[CATE covs] drop EP_UNEMP (unemployment) -> MAE=7.9956 | R^2=0.5746 | CATE mean=14.3565 std=3.3421 | PEHE=8.2172
+[CATE covs] drop RPL_THEME3 (SVI Theme 3 percentile) -> MAE=8.0094 | R^2=0.5741 | CATE mean=14.3511 std=3.4783 | PEHE=8.2178
+[CATE covs] drop EP_SNGPNT (single-parent households) -> MAE=8.2955 | R^2=0.5457 | CATE mean=14.6986 std=3.4452 | PEHE=8.5621
+[CATE covs] drop EP_MUNIT (multi-unit housing) -> MAE=8.5221 | R^2=0.5241 | CATE mean=14.1672 std=3.3778 | PEHE=7.9703
+[CATE covs] drop EP_MINRTY (minority (non-white)) -> MAE=10.1798 | R^2=0.3677 | CATE mean=20.5432 std=0.0000 | PEHE=14.2802
+
+[CATE: covariates + Dino features]
+[CATE cov+feat] baseline           -> MAE=6.4113 | R^2=0.7054 | CATE mean=7.9413 std=4.6242 | PEHE=3.6672
+[CATE cov+feat] drop EP_NOINT (no internet) -> MAE=6.8793 | R^2=0.6691 | CATE mean=9.8832 std=4.0856 | PEHE=4.5475
+[CATE cov+feat] drop EP_DISABL (disabled residents) -> MAE=7.0390 | R^2=0.6624 | CATE mean=11.5153 std=3.9507 | PEHE=5.8410
+[CATE cov+feat] drop EP_AGE65 (age 65+) -> MAE=7.1464 | R^2=0.6504 | CATE mean=12.2291 std=4.3379 | PEHE=6.6702
+[CATE cov+feat] drop EP_NOVEH (no vehicle) -> MAE=7.9689 | R^2=0.5743 | CATE mean=14.2757 std=4.3290 | PEHE=8.4037
+[CATE cov+feat] drop EP_LIMENG (limited English proficiency) -> MAE=8.0811 | R^2=0.5658 | CATE mean=14.9702 std=4.3701 | PEHE=9.1810
+[CATE cov+feat] drop EP_AGE17 (age 17 or younger) -> MAE=8.0488 | R^2=0.5712 | CATE mean=14.6150 std=4.2953 | PEHE=8.8983
+[CATE cov+feat] drop EP_UNEMP (unemployment) -> MAE=8.3413 | R^2=0.5436 | CATE mean=15.0560 std=4.6642 | PEHE=9.4856
+[CATE cov+feat] drop RPL_THEME3 (SVI Theme 3 percentile) -> MAE=8.3756 | R^2=0.5452 | CATE mean=14.8865 std=4.4462 | PEHE=9.2594
+[CATE cov+feat] drop EP_SNGPNT (single-parent households) -> MAE=8.6865 | R^2=0.5122 | CATE mean=16.0134 std=4.7699 | PEHE=10.3343
+[CATE cov+feat] drop EP_MUNIT (multi-unit housing) -> MAE=8.7891 | R^2=0.4981 | CATE mean=14.9997 std=4.4225 | PEHE=9.3755
+[CATE cov+feat] drop EP_MINRTY (minority (non-white)) -> MAE=10.4104 | R^2=0.3380 | CATE mean=20.5571 std=6.6041 | PEHE=15.6947
+
+[CATE: covariates + embeddings]
+[CATE cov+feat] baseline           -> MAE=6.2128 | R^2=0.7171 | CATE mean=7.3499 std=4.0048 | PEHE=2.7860
+[CATE cov+feat] drop EP_NOINT (no internet) -> MAE=6.6864 | R^2=0.6844 | CATE mean=9.5450 std=3.6997 | PEHE=3.9927
+[CATE cov+feat] drop EP_DISABL (disabled residents) -> MAE=6.8935 | R^2=0.6710 | CATE mean=10.8689 std=3.9064 | PEHE=5.0911
+[CATE cov+feat] drop EP_AGE65 (age 65+) -> MAE=6.9858 | R^2=0.6623 | CATE mean=11.0433 std=3.9094 | PEHE=5.4844
+[CATE cov+feat] drop EP_NOVEH (no vehicle) -> MAE=7.8117 | R^2=0.5930 | CATE mean=13.8608 std=3.8427 | PEHE=7.9199
+[CATE cov+feat] drop EP_LIMENG (limited English proficiency) -> MAE=7.9264 | R^2=0.5833 | CATE mean=14.2909 std=4.3086 | PEHE=8.3623
+[CATE cov+feat] drop EP_AGE17 (age 17 or younger) -> MAE=7.9409 | R^2=0.5820 | CATE mean=14.2596 std=3.8478 | PEHE=8.3054
+[CATE cov+feat] drop EP_UNEMP (unemployment) -> MAE=8.0641 | R^2=0.5648 | CATE mean=15.0432 std=4.0982 | PEHE=9.1365
+[CATE cov+feat] drop RPL_THEME3 (SVI Theme 3 percentile) -> MAE=8.0621 | R^2=0.5648 | CATE mean=15.1550 std=4.0554 | PEHE=9.2413
+[CATE cov+feat] drop EP_SNGPNT (single-parent households) -> MAE=8.3701 | R^2=0.5340 | CATE mean=16.1260 std=4.2880 | PEHE=10.2247
+[CATE cov+feat] drop EP_MUNIT (multi-unit housing) -> MAE=8.7266 | R^2=0.5043 | CATE mean=14.8814 std=4.3662 | PEHE=9.1749
+[CATE cov+feat] drop EP_MINRTY (minority (non-white)) -> MAE=10.4364 | R^2=0.3326 | CATE mean=20.3936 std=5.6852 | PEHE=15.2312

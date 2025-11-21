@@ -13,6 +13,7 @@ def preprocess(img):
 
 taskname = 'cdcsvi_nohsdp_poverty_disc'
 src = rasterio.open("{}/{}.tif".format(taskname, 0)).read()
+
 dst = preprocess(src)
 # (height, width, depth:3)
 # 0-255
